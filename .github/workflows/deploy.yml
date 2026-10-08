@@ -17,6 +17,6 @@ jobs:
         with:
           host: 13.60.74.228
           username: ubuntu
-          password: ${{ secrets.PRIVATE_VM_SSH }}
+          key: ${{ secrets.PRIVATE_VM_SSH }}
           port: 22
           script: whoami
