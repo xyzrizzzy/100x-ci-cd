@@ -20,7 +20,10 @@ jobs:
           key: ${{ secrets.PRIVATE_VM_SSH }}
           port: 22
           script: | 
-            cd 100x-ci-cd
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+
+            cd 100x-ci-cd/
             git pull origin main
             npm install
             npm run build
